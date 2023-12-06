@@ -1,0 +1,53 @@
+# [Code] PneumoLLM: Harnessing the Power of Large Language Model for Pneumoconiosis Diagnosis
+
+Updated on 2023.12.06
+
+
+## Key Features
+
+This repository provides the official implementation of *PneumoLLM: Harnessing the Power of Large Language Model for Pneumoconiosis Diagnosis*.
+
+- New paradigm in applying large language models to diagnose data-scarce occupational diseases
+- The novel contextual multi-token engine and information emitter module to meticulously draw out knowledge from LLMs
+- Superiority in diagnosing pneumoconiosi, effectiveness of each designed module
+
+
+## Links
+
+- [Paper](https://arxiv.org/abs/2307.14901)
+- [Code](https://github.com/Yunkun-Zhang/CITE)
+
+
+### Preparation
+- Download [LLaMA-7B](https://huggingface.co/nyanko7/LLaMA-7B/tree/main) from HuggingFace (unofficial).
+
+## Get Started
+
+**Training**
+
+- Before training, please modify related parameters, e.g., exp_name, and check the related parameters, e.g., epochs, lr, batch_size, accum_iter.
+- Replace the data file and llama model path
+
+```bash
+--data_root
+--llama_model_path
+```
+
+```bash
+run train_acc.py
+```
+
+**Validation**
+
+- Before validation, please modify related parameters.
+
+```bash
+run eval_acc.py
+```
+
+[**Checkpoint**](https://pan.baidu.com/s/1XitrJg0mKZsUxUOKxlLs7A?pwd=gym5)
+
+
+## 📝 Citation
+
+
