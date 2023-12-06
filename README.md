@@ -1,4 +1,4 @@
-#PneumoLLM: Harnessing the Power of Large Language Model for Pneumoconiosis Diagnosis
+# PneumoLLM: Harnessing the Power of Large Language Model for Pneumoconiosis Diagnosis
 
 Updated on 2023.12.06
 
