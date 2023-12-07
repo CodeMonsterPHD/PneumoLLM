@@ -108,8 +108,7 @@ def main(args):
     # define the model
     model = phellm(args)
 
-    # checkpoint_file=args.output_dir + args.experi+'/'+'trainable_bestvalpt.pth'
-    checkpoint_file = '/checkpoint.pth'
+    checkpoint_file = args.output_dir + '/trainable_bestvalpt.pth'
 
     checkpoint = torch.load(checkpoint_file, map_location="cpu")['model']
     model_dict = model.state_dict()
@@ -191,7 +190,7 @@ def main(args):
     print('task_accs:', task_accs)
     df_data_results=pd.DataFrame(data_results)
 
-    df_data_results.to_csv('./outputs/test_data_result.csv', index=False)
+    df_data_results.to_csv(args.output_dir + '/test_data_result.csv', index=False)
     results = []
     avgacc = []
     avgauc = []
@@ -247,7 +246,7 @@ def main(args):
     df = pd.DataFrame(results)
     print(df)
 
-    df.to_csv('./outputs/test_result.csv', index=False)
+    df.to_csv(args.output_dir + '/test_result.csv', index=False)
 
 
 
