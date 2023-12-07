@@ -56,7 +56,7 @@ def get_args_parser(exp_name):
                         help='Pin CPU memory in DataLoader for more efficient (sometimes) transfer to GPU.')
 
     # These parameter do not need adjust
-    parser.add_argument('--llama_model_path', default='./llama', type=str, help='path of llama model')
+    parser.add_argument('--llama_model_path', default='.../LLaMA-7B', type=str, help='path of llama model')
     parser.add_argument('--llm_model', default='7B', type=str, metavar='MODEL', help='Name of llm model to train')
     # todo: remove distributed training parameters
     parser.add_argument('--world_size', default=1, type=int, help='number of distributed processes')
