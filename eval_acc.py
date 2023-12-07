@@ -44,7 +44,7 @@ def get_args_parser(exp_name):
                         help='Pin CPU memory in DataLoader for more efficient (sometimes) transfer to GPU.')
 
     # These parameter do not need adjust
-    parser.add_argument('--llama_model_path', default='/llama', type=str, help='path of llama model')
+    parser.add_argument('--llama_model_path', default='.../LLaMA-7B', type=str, help='path of llama model')
     parser.add_argument('--llm_model', default='7B', type=str, metavar='MODEL', help='Name of llm model to train')
     # todo: remove distributed training parameters
     parser.add_argument('--world_size', default=1, type=int, help='number of distributed processes')
@@ -87,8 +87,8 @@ def get_args_parser(exp_name):
 def main(args):
     device = torch.device(args.device)
 
-    dataset_val = Shanxi_Dataset(imgpath=args.data_root + 'segimages2_224_resize',
-                                 txtpath=args.data_root + 'small_val1.txt')
+    dataset_val = Shanxi_Dataset(imgpath=args.data_root + 'segimages_224_resize',
+                                 txtpath=args.data_root + 'val.txt')
 
     num_tasks = misc.get_world_size()
     global_rank = misc.get_rank()
@@ -191,7 +191,7 @@ def main(args):
     print('task_accs:', task_accs)
     df_data_results=pd.DataFrame(data_results)
 
-    df_data_results.to_csv('/disk1/wjr/workspace/PneumoLLM/outputs/pneumollm_weights/test_data_result.csv', index=False)
+    df_data_results.to_csv('./outputs/test_data_result.csv', index=False)
     results = []
     avgacc = []
     avgauc = []
@@ -247,7 +247,7 @@ def main(args):
     df = pd.DataFrame(results)
     print(df)
 
-    df.to_csv('/disk1/wjr/workspace/PneumoLLM/outputs/pneumollm_weights/test_result.csv', index=False)
+    df.to_csv('./outputs/test_result.csv', index=False)
 
 
 
