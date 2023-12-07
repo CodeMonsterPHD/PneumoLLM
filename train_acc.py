@@ -107,10 +107,10 @@ def main(args):
 
     # set_seed
     setup_seed(args.seed)
-    dataset_train = Shanxi_Dataset(imgpath=args.data_root+'segimages2_224_resize',
-                 txtpath=args.data_root+'small_train2.txt')
-    dataset_val = Shanxi_Dataset(imgpath=args.data_root+'segimages2_224_resize',
-                 txtpath=args.data_root+'small_val2.txt')
+    dataset_train = Shanxi_Dataset(imgpath=args.data_root+'segimages_224_resize',
+                 txtpath=args.data_root+'train.txt')
+    dataset_val = Shanxi_Dataset(imgpath=args.data_root+'segimages_224_resize',
+                 txtpath=args.data_root+'val.txt')
     if os.path.exists(args.output_dir):
         print('output_dir exist!')
     else:
