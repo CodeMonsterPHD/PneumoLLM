@@ -13,7 +13,7 @@ This repository provides the official implementation of *PneumoLLM: Harnessing t
 
 
 ## Links
-
+- [Paper](https://arxiv.org/abs/2312.03490)
 - [Code](https://github.com/CodeMonsterPHD/PneumoLLM/tree/main)
 
 
