@@ -44,7 +44,7 @@ run train_acc.py
 run eval_acc.py
 ```
 
-[**Checkpoint**][Baidu Drive](https://pan.baidu.com/s/1_epeOxdntN_0Y5xAkYNW2g?pwd=8md8) or [Google Drive](https://drive.google.com/file/d/1ocZudtEAo7LFIOSWLDYReDGu933pNTig/view?usp=sharing) 
+[**Checkpoint**][Baidu Drive](https://pan.baidu.com/s/1KSGlFn-GGFAyXC6DMgVbJA?pwd=chvt) or [Google Drive](https://drive.google.com/file/d/102oi317pqU8jhXJc9EW10WzXhhooHmAt/view?usp=sharing) 
 
 
 ## 📝 Citation
