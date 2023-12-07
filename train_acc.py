@@ -142,14 +142,6 @@ def main(args):
     )
     # define the model
     model = phellm(args)
-    checkpoint_file = '/checkpoint.pth'
-    checkpoint = torch.load(checkpoint_file, map_location="cpu")['model']
-    model_dict = model.state_dict()
-
-    pretrained_dict = {key: value for key, value in checkpoint.items() if
-                       (key in model_dict)}
-
-    model.load_state_dict(pretrained_dict, strict=False)
     model.to(device)
     model_without_ddp = model
 
