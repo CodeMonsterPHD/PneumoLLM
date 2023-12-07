@@ -309,8 +309,7 @@ class Transformer(nn.Module):
         # todo: check here
         start_pos = 0
         for layer in self.layers:
-            # h = layer(h, start_pos, freqs_cis, self.visual_mask)
-            h = layer(h, start_pos, freqs_cis, mask)
+            h = layer(h, start_pos, freqs_cis, self.visual_mask)
 
         h = self.norm(h)  # [B, 6, 4096]
         feature = torch.mean(h, dim=1)  # [B, 4096]
