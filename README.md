@@ -49,4 +49,5 @@ run eval_acc.py
 
 ## 📝 Citation
 
+Song M, Yu Z, Wang J, et al. PneumoLLM: Harnessing the Power of Large Language Model for Pneumoconiosis Diagnosis[J]. arxiv preprint arxiv:2312.03490, 2023.
 
